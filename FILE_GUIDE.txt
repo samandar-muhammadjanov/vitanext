@@ -1,0 +1,345 @@
+╔══════════════════════════════════════════════════════════════════════════╗
+║                    VITANEXT PROJECT FILE GUIDE                          ║
+║           Readable & Organized Code Structure                           ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+📁 PROJECT STRUCTURE
+═══════════════════════════════════════════════════════════════════════════
+
+vitanext-structured/
+│
+├── 📄 index.html                 [225 lines] - Main HTML Structure
+│   ├─ Navigation with logo & menu
+│   ├─ Hero section with statistics
+│   ├─ Advantages (3 feature cards)
+│   ├─ Products grid (dynamic)
+│   ├─ About section (mission/values)
+│   ├─ Footer with links
+│   └─ Product detail modal
+│
+├── 🎨 styles.css                 [1,080 lines] - All Styling
+│   ├─ CSS Variables & Reset
+│   ├─ Navigation Styles
+│   ├─ Hero Section
+│   ├─ Components (cards, buttons)
+│   ├─ Animations & Transitions
+│   ├─ Modal Styles
+│   └─ Responsive Design (768px, 1024px)
+│
+├── 📦 products.js                [241 lines] - Product Database
+│   └─ 18 products with:
+│      ├─ Multilingual names (Uzbek/Russian)
+│      ├─ Categories & Descriptions
+│      ├─ Composition details
+│      ├─ Benefits & Usage info
+│      └─ Target audience
+│
+├── ⚙️ script.js                   [240 lines] - JavaScript Logic
+│   ├─ Language Management
+│   ├─ Product Rendering
+│   ├─ Modal Controls
+│   ├─ Smooth Scrolling
+│   ├─ Animations
+│   └─ Event Handlers
+│
+├── 📚 README.md                   - Complete Documentation
+│   ├─ Project overview
+│   ├─ File descriptions
+│   ├─ Features & customization
+│   └─ Learning resources
+│
+└── 📋 FILE_GUIDE.txt             - This file
+
+
+�� CODE STATISTICS
+═══════════════════════════════════════════════════════════════════════════
+
+Total Lines:        1,786 lines
+Total Size:         76 KB
+Languages:          HTML, CSS, JavaScript
+Dependencies:       NONE (Pure Vanilla)
+Browser Support:    All modern browsers
+
+
+📋 DETAILED FILE BREAKDOWN
+═══════════════════════════════════════════════════════════════════════════
+
+1️⃣  index.html (225 LINES)
+    ─────────────────────────────────────────────────────────────────────
+    Type:        HTML5 Semantic
+    Purpose:     Page structure and markup
+    
+    Contains:
+    ✓ Navigation bar (fixed, responsive)
+    ✓ Hero section (title, slogan, CTA buttons)
+    ✓ Statistics cards (18+, 100%, 24/7)
+    ✓ Advantages section (3 feature cards)
+    ✓ Products section (dynamic grid)
+    ✓ About section (values, mission)
+    ✓ Footer (links, social, contact)
+    ✓ Product modal (details overlay)
+    
+    Features:
+    • Semantic HTML5 tags
+    • Multilingual data attributes
+    • BEM-inspired class naming
+    • Clean indentation
+    • Accessible structure
+
+
+2️⃣  styles.css (1,080 LINES)
+    ─────────────────────────────────────────────────────────────────────
+    Type:        CSS3
+    Purpose:     All styling and animations
+    
+    Organized Sections:
+    ✓ CSS Variables (15+ custom properties)
+    ✓ Global Reset & Typography
+    ✓ Navigation (fixed, blur, scroll effect)
+    ✓ Hero (gradients, animations)
+    ✓ Components (cards, buttons, badges)
+    ✓ Products Grid (responsive)
+    ✓ Modal (overlay, animations)
+    ✓ Animations (@keyframes)
+    ✓ Responsive Design (breakpoints)
+    
+    Features:
+    • CSS Custom Properties for theming
+    • Gradient backgrounds
+    • Glassmorphism effects
+    • Smooth animations
+    • Media queries for responsiveness
+    • Shadow & elevation effects
+    • Transition effects
+
+
+3️⃣  products.js (241 LINES)
+    ─────────────────────────────────────────────────────────────────────
+    Type:        JavaScript (Data)
+    Purpose:     Product information database
+    
+    Contains:
+    ✓ productsData array (18 products)
+    
+    Each Product Has:
+    • id (unique identifier)
+    • category (uz/ru)
+    • name (uz/ru)
+    • description (uz/ru)
+    • emoji (visual icon)
+    • details object:
+      - composition (uz/ru)
+      - benefits (uz/ru)
+      - usage (uz/ru)
+      - audience (uz/ru)
+    
+    Products Include:
+    1. Vitamin C 1000mg
+    2. Vitamin D3 5000 IU
+    3. Daily Multi Complex
+    4. Omega-3 Fish Oil
+    5. Magnesium 400mg
+    6. Probiotic 50 Billion
+    7. Coenzyme Q10
+    8. Calcium + D3
+    9. B-Complex Plus
+    10. Vitamin E 400 IU
+    11. Zinc 50mg
+    12. Collagen Peptides
+    13. Turmeric Curcumin
+    14. Iron Plus
+    15. L-Theanine Calm
+    16. Lutein Eye Health
+    17. Melatonin 5mg
+    18. Resveratrol Plus
+
+
+4️⃣  script.js (240 LINES)
+    ─────────────────────────────────────────────────────────────────────
+    Type:        JavaScript (Logic)
+    Purpose:     Interactive functionality
+    
+    Main Functions:
+    ✓ switchLanguage(lang)        - Change Uzbek/Russian
+    ✓ renderProducts()            - Display products
+    ✓ openProductDetail(id)       - Show product modal
+    ✓ closeModal()                - Close modal
+    ✓ observeElements()           - Animation triggers
+    
+    Event Handlers:
+    ✓ Scroll events (navbar effect)
+    ✓ Click events (navigation, modal)
+    ✓ Language switching
+    ✓ Mobile menu toggle
+    ✓ Keyboard events (Escape)
+    
+    Features:
+    • Intersection Observer API
+    • Dynamic DOM manipulation
+    • Smooth scroll behavior
+    • Modal management
+    • Multilingual support
+
+
+🎯 HOW TO USE
+═══════════════════════════════════════════════════════════════════════════
+
+OPTION 1: Direct in Browser
+──────────────────────────
+1. Go to: /Users/azamat/Desktop/vitanext-structured/
+2. Double-click: index.html
+3. Website opens in your browser
+4. Fully functional and ready to use!
+
+OPTION 2: Open in VS Code
+──────────────────────────
+1. Open VS Code
+2. File → Open Folder
+3. Select: vitanext-structured
+4. Click index.html to preview
+5. Edit files and see changes
+
+
+🎨 KEY FEATURES
+═══════════════════════════════════════════════════════════════════════════
+
+Design Features:
+  ✓ Modern gradient backgrounds
+  ✓ Glass morphism effects
+  ✓ Smooth animations
+  ✓ Responsive grid layouts
+  ✓ Interactive hover states
+  ✓ Mobile-optimized design
+
+Functionality:
+  ✓ Dynamic product rendering
+  ✓ Multilingual support (Uzbek/Russian)
+  ✓ Smooth scroll navigation
+  ✓ Product detail modal
+  ✓ Language switching
+  ✓ Mobile menu toggle
+  ✓ Scroll animations
+  ✓ Keyboard controls
+
+Responsiveness:
+  ✓ Desktop (1024px+)
+  ✓ Tablet (768px - 1024px)
+  ✓ Mobile (<768px)
+
+
+🎓 CODE QUALITY
+═══════════════════════════════════════════════════════════════════════════
+
+✓ Well-organized and readable
+✓ Comprehensive comments
+✓ No external dependencies
+✓ Semantic HTML structure
+✓ Best practice CSS
+✓ Clean JavaScript code
+✓ Easy to maintain
+✓ Simple to customize
+✓ Performance optimized
+✓ Accessibility friendly
+
+
+🔧 CUSTOMIZATION EXAMPLES
+═══════════════════════════════════════════════════════════════════════════
+
+Change Colors:
+──────────────
+Edit styles.css:
+  :root {
+      --primary: #092256;     ← Change primary color
+      --secondary: #32B452;   ← Change accent color
+  }
+
+Add Product:
+─────────────
+Edit products.js - add to productsData array:
+  {
+      id: 19,
+      category: { uz: "...", ru: "..." },
+      name: { uz: "...", ru: "..." },
+      ...
+  }
+
+Update Translations:
+────────────────────
+Edit index.html data attributes:
+  <span data-uz="New Text" data-ru="Новый текст">
+      New Text
+  </span>
+
+
+📱 RESPONSIVE BREAKPOINTS
+═══════════════════════════════════════════════════════════════════════════
+
+Desktop:     > 1024px  - Full layout, 3-column grids
+Tablet:      768-1024px - 2-column grids, adjusted spacing
+Mobile:      < 768px   - Single column, hamburger menu
+
+
+🌐 LANGUAGES SUPPORTED
+═══════════════════════════════════════════════════════════════════════════
+
+Currently:
+  ✓ Uzbek (uz)   - Default language
+  ✓ Russian (ru) - Alternative language
+
+To Add More Languages:
+  1. Add data attributes in HTML
+  2. Add language code in JavaScript
+  3. Update productsData object
+
+
+✨ HIGHLIGHTS
+═══════════════════════════════════════════════════════════════════════════
+
+Original File:       1 HTML file (1,674 lines)
+Extracted to:        5 organized files (1,786 lines)
+
+Benefits of New Structure:
+  ✓ Easier to maintain
+  ✓ Faster to find code
+  ✓ Better organization
+  ✓ Scalable design
+  ✓ Professional structure
+  ✓ Reusable components
+  ✓ Team-friendly format
+  ✓ Simple to extend
+
+
+📚 FILE REFERENCES
+═══════════════════════════════════════════════════════════════════════════
+
+All files are in the vitanext-structured folder.
+
+Quick Reference:
+  - HTML structure    → index.html
+  - Styling          → styles.css
+  - Product data     → products.js
+  - Interactivity    → script.js
+  - Documentation    → README.md
+  - Summary          → EXTRACTION_SUMMARY.txt
+  - This file        → FILE_GUIDE.txt
+
+
+✅ READY TO USE!
+═══════════════════════════════════════════════════════════════════════════
+
+Your VitaNext website is now:
+  ✓ Organized into 5 readable files
+  ✓ Well-documented with comments
+  ✓ Easy to maintain and update
+  ✓ Ready for customization
+  ✓ Professional structure
+  ✓ Fully functional
+
+Location: /Users/azamat/Desktop/vitanext-structured/
+Status:   ✅ COMPLETE & READY
+
+
+═══════════════════════════════════════════════════════════════════════════
+Created: February 6, 2026
+Last Updated: February 6, 2026
+═══════════════════════════════════════════════════════════════════════════
