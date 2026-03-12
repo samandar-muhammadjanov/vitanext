@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VitaNext - Mahsulot</title>
+    <link rel="icon" type="image/svg+xml" href="assets/icons/fav.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="product-detail.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html"><img src="assets/images/logo.png" alt="VitaNext Logo" class="logo-img"></a>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="index.html#home" data-uz="Bosh sahifa" data-ru="Главная">Bosh sahifa</a></li>
+                    <li><a href="index.html#about" data-uz="Biz haqimizda" data-ru="О нас">Biz haqimizda</a></li>
+                    <li><a href="index.html#products" data-uz="Mahsulotlar" data-ru="Продукты">Mahsulotlar</a></li>
+                    <li><a href="index.html#contact" data-uz="Aloqa" data-ru="Контакты">Aloqa</a></li>
+                </ul>
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="uz">UZ</button>
+                    <button class="lang-btn" data-lang="ru">RU</button>
+                </div>
+            </div>
+            <div class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Detail Hero -->
+    <section class="product-detail-hero">
+        <div class="product-detail-container">
+            <div class="breadcrumb">
+                <a href="index.html" data-uz="Bosh sahifa" data-ru="Главная">Bosh sahifa</a>
+                <span>/</span>
+                <a href="index.html#products" data-uz="Mahsulotlar" data-ru="Продукты">Mahsulotlar</a>
+                <span>/</span>
+                <span id="breadcrumbProduct"></span>
+            </div>
+
+            <div class="product-hero-grid">
+                <div class="product-image-large">
+                    <img id="productImage" src="" alt="">
+                </div>
+                <div class="product-hero-info">
+                    <div class="product-category-badge" id="productCategory"></div>
+                    <h1 class="product-title" id="productTitle"></h1>
+                    <p class="product-short-desc" id="productShortDesc"></p>
+
+                    <!-- <div class="product-quick-info">
+                        <div class="quick-info-item">
+                            <div class="quick-info-icon">💊</div>
+                            <div class="quick-info-label" data-uz="Shakli" data-ru="Форма">Shakli</div>
+                            <div class="quick-info-value" id="productForm"></div>
+                        </div>
+                        <div class="quick-info-item">
+                            <div class="quick-info-icon">📦</div>
+                            <div class="quick-info-label" data-uz="Qadoqlash" data-ru="Упаковка">Qadoqlash</div>
+                            <div class="quick-info-value" id="productPackaging"></div>
+                        </div>
+                        <div class="quick-info-item">
+                            <div class="quick-info-icon">✓</div>
+                            <div class="quick-info-label" data-uz="Sertifikat" data-ru="Сертификат">Sertifikat</div>
+                            <div class="quick-info-value" data-uz="Mavjud" data-ru="Имеется">Mavjud</div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Content -->
+    <section class="product-content">
+        <div class="content-grid">
+            <div class="main-content">
+                <!-- Full Description -->
+                <div class="content-section">
+                    <h2>
+                        <span class="section-icon">📋</span>
+                        <span data-uz="To'liq tavsif" data-ru="Полное описание">To'liq tavsif</span>
+                    </h2>
+                    <div class="full-description" id="fullDescription">
+                        <!-- Full description will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- Composition -->
+                <div class="content-section">
+                    <h2>
+                        <span class="section-icon">🧪</span>
+                        <span data-uz="Tarkibi" data-ru="Состав">Tarkibi</span>
+                    </h2>
+                    <p id="productComposition"></p>
+                </div>
+
+                <!-- Benefits -->
+                <div class="content-section">
+                    <h2>
+                        <span class="section-icon">✨</span>
+                        <span data-uz="Foydalari" data-ru="Преимущества">Foydalari</span>
+                    </h2>
+                    <p id="productBenefits"></p>
+                </div>
+
+                <!-- Usage -->
+                <div class="content-section">
+                    <h2>
+                        <span class="section-icon">💊</span>
+                        <span data-uz="Qo'llash usuli" data-ru="Способ применения">Qo'llash usuli</span>
+                    </h2>
+                    <p id="productUsage"></p>
+                </div>
+
+                <!-- Target Audience -->
+                <div class="content-section">
+                    <h2>
+                        <span class="section-icon">👥</span>
+                        <span data-uz="Kimlar uchun" data-ru="Для кого">Kimlar uchun</span>
+                    </h2>
+                    <p id="productAudience"></p>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-card">
+                    <h3 data-uz="Mahsulot haqida" data-ru="О продукте">Mahsulot haqida</h3>
+                    <div class="info-item">
+                        <div class="info-icon">📁</div>
+                        <div class="info-content">
+                            <h4 data-uz="Kategoriya" data-ru="Категория">Kategoriya</h4>
+                            <p id="sidebarCategory"></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">🔖</div>
+                        <div class="info-content">
+                            <h4 data-uz="Mahsulot ID" data-ru="ID продукта">Mahsulot ID</h4>
+                            <p id="sidebarId"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-card cta-card">
+                    <h3 data-uz="Savollaringiz bormi?" data-ru="Есть вопросы?">Savollaringiz bormi?</h3>
+                    <p data-uz="Mutaxassislarimiz sizga yordam berishga tayyor"
+                        data-ru="Наши специалисты готовы вам помочь">Mutaxassislarimiz sizga yordam berishga tayyor</p>
+                    <a href="index.html#contact" class="btn-contact" data-uz="Bog'lanish"
+                        data-ru="Связаться">Bog'lanish</a>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h1><img src="assets/images/logoWhite.png" alt="VitaNext Logo" class="logo-img-footer"></h1>
+                <p data-uz="Sog'lom hayot uchun ishonchli hamkor. Sizning sog'lig'ingiz – bizning ustuvor vazifamiz."
+                    data-ru="Надежный партнер для здоровой жизни. Ваше здоровье – наш приоритет.">Sog'lom hayot uchun
+                    ishonchli hamkor. Sizning sog'lig'ingiz – bizning ustuvor vazifamiz.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/vita.next/" class="social-link" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                            class="social-icon">
+                            <path
+                                d="M17.34,5.46h0a1.2,1.2,0,1,0,1.2,1.2A1.2,1.2,0,0,0,17.34,5.46Zm4.6,2.42a7.59,7.59,0,0,0-.46-2.43,4.94,4.94,0,0,0-1.16-1.77,4.7,4.7,0,0,0-1.77-1.15,7.3,7.3,0,0,0-2.43-.47C15.06,2,14.72,2,12,2s-3.06,0-4.12.06a7.3,7.3,0,0,0-2.43.47A4.78,4.78,0,0,0,3.68,3.68,4.7,4.7,0,0,0,2.53,5.45a7.3,7.3,0,0,0-.47,2.43C2,8.94,2,9.28,2,12s0,3.06.06,4.12a7.3,7.3,0,0,0,.47,2.43,4.7,4.7,0,0,0,1.15,1.77,4.78,4.78,0,0,0,1.77,1.15,7.3,7.3,0,0,0,2.43.47C8.94,22,9.28,22,12,22s3.06,0,4.12-.06a7.3,7.3,0,0,0,2.43-.47,4.7,4.7,0,0,0,1.77-1.15,4.85,4.85,0,0,0,1.16-1.77,7.59,7.59,0,0,0,.46-2.43c0-1.06.06-1.4.06-4.12S22,8.94,21.94,7.88ZM20.14,16a5.61,5.61,0,0,1-.34,1.86,3.06,3.06,0,0,1-.75,1.15,3.19,3.19,0,0,1-1.15.75,5.61,5.61,0,0,1-1.86.34c-1,.05-1.37.06-4,.06s-3,0-4-.06A5.73,5.73,0,0,1,6.1,19.8,3.27,3.27,0,0,1,5,19.05a3,3,0,0,1-.74-1.15A5.54,5.54,0,0,1,3.86,16c0-1-.06-1.37-.06-4s0-3,.06-4A5.54,5.54,0,0,1,4.21,6.1,3,3,0,0,1,5,5,3.14,3.14,0,0,1,6.1,4.2,5.73,5.73,0,0,1,8,3.86c1,0,1.37-.06,4-.06s3,0,4,.06a5.61,5.61,0,0,1,1.86.34A3.06,3.06,0,0,1,19.05,5,3.06,3.06,0,0,1,19.8,6.1,5.61,5.61,0,0,1,20.14,8c.05,1,.06,1.37.06,4S20.19,15,20.14,16ZM12,6.87A5.13,5.13,0,1,0,17.14,12,5.12,5.12,0,0,0,12,6.87Zm0,8.46A3.33,3.33,0,1,1,15.33,12,3.33,3.33,0,0,1,12,15.33Z"
+                                fill="currentColor" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Telegram">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="24" height="24"
+                            class="social-icon">
+                            <path
+                                d="M28.59 4.29a2.23 2.23 0 0 0-2.27-.36L3.41 13.1a1.83 1.83 0 0 0 0 3.38l1.48.61a1 1 0 0 0 1.31-.53 1 1 0 0 0-.54-1.31l-1.1-.45 22.51-9a.22.22 0 0 1 .23 0 .24.24 0 0 1 .08.23l-4.11 19.18a.4.4 0 0 1-.26.3.39.39 0 0 1-.39-.06l-8-6.24 7.83-7.91a1 1 0 0 0-1.22-1.56l-11.48 6.8a1 1 0 1 0 1 1.72l4.83-2.85-2.35 2.39a2 2 0 0 0 .2 3.08l8 6.15a2.4 2.4 0 0 0 1.47.5 2.47 2.47 0 0 0 .83-.15 2.37 2.37 0 0 0 1.52-1.75l4.08-19.16a2.23 2.23 0 0 0-.74-2.18Z"
+                                fill="currentColor" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4 data-uz="Tezkor havolalar" data-ru="Быстрые ссылки">Tezkor havolalar</h4>
+                <ul class="footer-links">
+                    <li><a href="#home" data-uz="Bosh sahifa" data-ru="Главная">Bosh sahifa</a></li>
+                    <li><a href="#about" data-uz="Biz haqimizda" data-ru="О нас">Biz haqimizda</a></li>
+                    <li><a href="#products" data-uz="Mahsulotlar" data-ru="Продукты">Mahsulotlar</a></li>
+                    <li><a href="#contact-form" data-uz="Aloqa" data-ru="Контакты">Aloqa</a></li>
+                </ul>
+            </div>
+            <!-- <div class="footer-section">
+                <h4 data-uz="Mahsulotlar" data-ru="Продукты">Mahsulotlar</h4>
+                <ul class="footer-links">
+                    <li><a href="#" data-uz="Vitaminlar" data-ru="Витамины">Vitaminlar</a></li>
+                    <li><a href="#" data-uz="Minerallar" data-ru="Минералы">Minerallar</a></li>
+                    <li><a href="#" data-uz="Qo'shimchalar" data-ru="Добавки">Qo'shimchalar</a></li>
+                    <li><a href="#" data-uz="Komplekslar" data-ru="Комплексы">Komplekslar</a></li>
+                </ul>
+            </div> -->
+            <div class="footer-section">
+                <h4 data-uz="Aloqa" data-ru="Контакты">Aloqa</h4>
+                <ul class="footer-links">
+                    <li>+998 77 756 03 30</li>
+                    <!-- <li>info@vitanext.uz</li> -->
+                    <li data-uz="Toshkent, O'zbekiston" data-ru="Ташкент, Узбекистан">Toshkent, O'zbekiston</li>
+                    <li data-uz="Dushanba-Juma: 9:00-18:00" data-ru="Пн-Пт: 9:00-18:00">Dushanba-Juma: 9:00-18:00</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 VitaNext. <span data-uz="Barcha huquqlar himoyalangan." data-ru="Все права защищены.">Barcha
+                    huquqlar himoyalangan.</span></p>
+        </div>
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="product-detail.js"></script>
+</body>
+
+</html>

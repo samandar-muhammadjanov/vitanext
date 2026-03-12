@@ -7,7 +7,7 @@
 // Language Management
 // ===========================
 
-let currentLang = 'uz';
+let currentLang = localStorage.getItem('vitanext_lang') || 'uz';
 
 /**
  * Switch the website language
@@ -15,6 +15,7 @@ let currentLang = 'uz';
  */
 function switchLanguage(lang) {
     currentLang = lang;
+    localStorage.setItem('vitanext_lang', lang);
     
     // Update language button states
     document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -66,70 +67,15 @@ function renderProducts() {
 }
 
 // ===========================
-// Product Detail Modal
+// Product Detail Navigation
 // ===========================
 
 /**
- * Open product detail modal
+ * Navigate to product detail page
  * @param {number} id - Product ID
  */
 function openProductDetail(id) {
-    const product = productsData.find(p => p.id === id);
-    if (!product) return;
-    
-    const modal = document.getElementById('productModal');
-    
-    // Set modal title and category
-    document.getElementById('modalCategory').textContent = product.category[currentLang];
-    document.getElementById('modalTitle').textContent = product.name[currentLang];
-    
-    // Define section labels for both languages
-    const labels = {
-        uz: {
-            composition: 'Tarkibi',
-            benefits: 'Foydalari',
-            usage: 'Qo\'llash',
-            audience: 'Kimlar uchun'
-        },
-        ru: {
-            composition: 'Состав',
-            benefits: 'Преимущества',
-            usage: 'Применение',
-            audience: 'Для кого'
-        }
-    };
-    
-    // Populate modal body with product details
-    document.getElementById('modalBody').innerHTML = `
-        <div class="detail-section">
-            <h3><span class="detail-icon">📋</span> ${labels[currentLang].composition}</h3>
-            <p>${product.details.composition[currentLang]}</p>
-        </div>
-        <div class="detail-section">
-            <h3><span class="detail-icon">✨</span> ${labels[currentLang].benefits}</h3>
-            <p>${product.details.benefits[currentLang]}</p>
-        </div>
-        <div class="detail-section">
-            <h3><span class="detail-icon">💊</span> ${labels[currentLang].usage}</h3>
-            <p>${product.details.usage[currentLang]}</p>
-        </div>
-        <div class="detail-section">
-            <h3><span class="detail-icon">👥</span> ${labels[currentLang].audience}</h3>
-            <p>${product.details.audience[currentLang]}</p>
-        </div>
-    `;
-    
-    // Show modal
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-}
-
-/**
- * Close product detail modal
- */
-function closeModal() {
-    document.getElementById('productModal').classList.remove('active');
-    document.body.style.overflow = '';
+    window.location.href = `product-detail.html?id=${id}`;
 }
 
 // ===========================
@@ -427,7 +373,7 @@ if (document.getElementById('contactForm')) {
  * Initialize the website when DOM is loaded
  */
 document.addEventListener('DOMContentLoaded', () => {
-    renderProducts();
+    switchLanguage(currentLang);
     observeElements();
     
     // Phone input formatting
